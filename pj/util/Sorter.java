@@ -14,7 +14,7 @@ public abstract class Sorter implements Showable{
 	 * <p>
 	 * A method that fills selected array with
 	 * randomly generated Integer numbers. Main method
-	 * generate4s absolutely random numbers without any
+	 * generates absolutely random numbers without any
 	 * confines.
 	 * </p>
 	 * 
@@ -23,7 +23,7 @@ public abstract class Sorter implements Showable{
 	
 	public static void randomFill(int[] arr) {
 		for (int i = 0; i < arr.length; i++) {
-			arr[i] = arr[i] = ThreadLocalRandom.current().nextInt();;
+			arr[i] = arr[i] = ThreadLocalRandom.current().nextInt();
 		}
 		
 	}
@@ -94,8 +94,46 @@ public abstract class Sorter implements Showable{
         }
 	}
 	
-	private static void doQuickSort(int[] arr, int begin, int end) {
+	/**
+	 * <p>
+	 * Divides an array into smaller parts in
+	 * the left and right from pivot and swaps 
+	 * numbers if they are not on their places
+	 * </p>
+	 * 
+	 * @see Sorter#quickSort()
+	 * 
+	 * @param arr - an array to work with
+	 * @param begin - start point of array
+	 * @param end - end point of array
+	 * @return - 
+	 */
+	
+	private static int partition(int[] arr, int begin, int end) {
 		
+		int b = begin, e = end;
+		int temp;
+		int pivot = arr[(begin + end) / 2];
+		while (b <= e) {
+			while (arr[b] < pivot) b++;
+			while (arr[e] > pivot) e--;
+			
+			if (b <= e) {
+				temp = arr[b];
+				arr[b] = arr[e];
+				arr[e] = temp;
+				b++;
+				e--;
+			}
+		}
+		
+		return b;
+	}
+	
+	private static void doQuickSort(int[] arr, int begin, int end) {
+		int index = partition(arr, begin, end);
+		if (begin < index - 1) doQuickSort(arr, begin, index - 1);
+		if (begin < end) doQuickSort(arr, index, end);
 	}
 	
 	public static void quickSort(int[] arr) {
@@ -184,7 +222,7 @@ public abstract class Sorter implements Showable{
 	 * @return - biggest value of arguments
 	 */
 	
-	public static int compare(int one, int two) {
+	public static Object compare(int one, int two) {
 		return one > two ? one : one == two ? 0 : two;
 	}
 	
@@ -202,7 +240,7 @@ public abstract class Sorter implements Showable{
 	 * if second one is bigger twoReturn, otherwise 0;
 	 */
 	
-	public static int compare(int one, int two, int oneReturn, int twoReturn) {
+	public static Object compare(int one, int two, Object oneReturn, Object twoReturn) {
 		return one > two ? oneReturn : one == two ? 0 : twoReturn;
 	}
 	
