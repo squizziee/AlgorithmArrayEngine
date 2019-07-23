@@ -25,7 +25,6 @@ public abstract class IterEngine implements Showable {
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = arr[i] = ThreadLocalRandom.current().nextInt();
 		}
-		
 	}
 	
 	/**
@@ -44,7 +43,6 @@ public abstract class IterEngine implements Showable {
 		for (int i = 0; i < size; i++) {
 			list.add(ThreadLocalRandom.current().nextInt());
 		}
-		
 	}
 	
 	/**
@@ -63,7 +61,6 @@ public abstract class IterEngine implements Showable {
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = arr[i] = ThreadLocalRandom.current().nextInt(0, end + 1);
 		}
-		
 	}
 	
 	/**
@@ -83,7 +80,6 @@ public abstract class IterEngine implements Showable {
 		for (int i = 0; i < size; i++) {
 			list.add(ThreadLocalRandom.current().nextInt(0, end + 1));
 		}
-		
 	}
 	
 	/**
@@ -103,7 +99,6 @@ public abstract class IterEngine implements Showable {
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = ThreadLocalRandom.current().nextInt(start, end + 1);
 		}
-		
 	}
 	
 	/**
@@ -124,7 +119,6 @@ public abstract class IterEngine implements Showable {
 		for (int i = 0; i < size; i++) {
 			list.add(ThreadLocalRandom.current().nextInt(start, end + 1));
 		}
-		
 	}
 	
 	/**
@@ -138,24 +132,18 @@ public abstract class IterEngine implements Showable {
 	
 	public static void bubbleSort(int[] arr) {
 		int temp;
-        boolean isSorted = false;
-        
-        while (!isSorted) {
-        	
-            isSorted = true;
-            
-            for (int i = 0; i < arr.length - 1; i++) {
-            	
-                if (arr[i] > arr [i+1]) {
-                    isSorted = false;
-                    temp = arr[i+1];
-                    arr[i+1] = arr[i];
-                    arr[i] = temp;
-                }
-                
-            }
-            
-        }
+		boolean isSorted = false;
+		while (!isSorted) { 	
+		    isSorted = true;
+		    for (int i = 0; i < arr.length - 1; i++) {
+			if (arr[i] > arr [i+1]) {
+			    isSorted = false;
+			    temp = arr[i+1];
+			    arr[i+1] = arr[i];
+			    arr[i] = temp;
+			}
+		    }  
+		}
 	}
 	
 	/**
@@ -181,7 +169,6 @@ public abstract class IterEngine implements Showable {
 		while (b <= e) {
 			while (arr[b] < pivot) b++;
 			while (arr[e] > pivot) e--;
-			
 			if (b <= e) {
 				temp = arr[b];
 				arr[b] = arr[e];
@@ -190,7 +177,6 @@ public abstract class IterEngine implements Showable {
 				e--;
 			}
 		}
-		
 		return b;
 	}
 	
