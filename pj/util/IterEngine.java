@@ -8,14 +8,14 @@ import java.util.concurrent.ThreadLocalRandom;
  * @version 1.0
  */
 
-public abstract class Sorter implements Showable{
+public abstract class IterEngine implements Showable {
 	
 	/**
 	 * <p>
 	 * A method that fills selected array with
-	 * randomly generated Integer numbers. Main method
-	 * generates absolutely random numbers without any
-	 * confines.
+	 * certain amount of randomly generated Integer numbers. 
+	 * It generates absolutely random numbers 
+	 * without any confines.
 	 * </p>
 	 * 
 	 * @param arr - an array to work with
@@ -30,8 +30,29 @@ public abstract class Sorter implements Showable{
 	
 	/**
 	 * <p>
-	 * First overloaded method generates numbers in
-	 * range from 0 to end parameter.
+	 * A method that fills selected list with
+	 * certain amount of randomly generated Integer numbers. 
+	 * It generates absolutely random numbers 
+	 * without any confines.
+	 * </p>
+	 * 
+	 * @param list - a list to work with
+	 * @param size - an amount of numbers that will be generated
+	 */
+	
+	public static void randomFill(List<Integer> list, int size) {
+		for (int i = 0; i < size; i++) {
+			list.add(ThreadLocalRandom.current().nextInt());
+		}
+		
+	}
+	
+	/**
+	 * <p>
+	 * A method that fills selected list with
+	 * certain amount of randomly generated Integer numbers. 
+	 * It generates random numbers from 0 (non-inclusive)
+	 * to the end parameter (inclusive). 
 	 * </p>
 	 * 
 	 * @param arr - an array to work with
@@ -47,8 +68,30 @@ public abstract class Sorter implements Showable{
 	
 	/**
 	 * <p>
-	 * Second overloaded method generates numbers in
-	 * range from start parameter to end parameter.
+	 * A method that fills selected list with
+	 * certain amount of randomly generated Integer numbers. 
+	 * It generates random numbers from 0 (non-inclusive)
+	 * to the end parameter (inclusive). 
+	 * </p>
+	 * 
+	 * @param list - a list to work with
+	 * @param size - an amount of numbers that will be generated
+	 * @param end - biggest possible number to generate
+	 */
+	
+	public static void randomFill(List<Integer> list, int size, int end) {
+		for (int i = 0; i < size; i++) {
+			list.add(ThreadLocalRandom.current().nextInt(0, end + 1));
+		}
+		
+	}
+	
+	/**
+	 * <p>
+	 * A method that fills selected array with
+	 * certain amount of randomly generated Integer numbers. 
+	 * It generates random numbers from start parameter (non-inclusive)
+	 * to the end parameter (inclusive). 
 	 * </p>
 	 * 
 	 * @param arr - an array to work with
@@ -59,6 +102,27 @@ public abstract class Sorter implements Showable{
 	public static void randomFill(int[] arr, int start, int end) {
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = ThreadLocalRandom.current().nextInt(start, end + 1);
+		}
+		
+	}
+	
+	/**
+	 * <p>
+	 * A method that fills selected list with
+	 * certain amount of randomly generated Integer numbers. 
+	 * It generates random numbers from start parameter (non-inclusive)
+	 * to the end parameter (inclusive). 
+	 * </p>
+	 * 
+	 * @param list - a list to work with
+	 * @param size - an amount of numbers that will be generated
+	 * @param start - smallest possible number to generate
+	 * @param end - biggest possible number to generate
+	 */
+	
+	public static void randomFill(List<Integer> list, int size, int start, int end) {
+		for (int i = 0; i < size; i++) {
+			list.add(ThreadLocalRandom.current().nextInt(start, end + 1));
 		}
 		
 	}
@@ -101,7 +165,7 @@ public abstract class Sorter implements Showable{
 	 * numbers if they are not on their places
 	 * </p>
 	 * 
-	 * @see Sorter#quickSort()
+	 * @see IterEngine#quickSort()
 	 * 
 	 * @param arr - an array to work with
 	 * @param begin - start point of array
@@ -145,7 +209,7 @@ public abstract class Sorter implements Showable{
 	 * Private class method that returns array sort status.
 	 * </p>
 	 * 
-	 * @see Sorter#getInfo()
+	 * @see IterEngine#getInfo()
 	 * 
 	 * @param arr - an array to work with
 	 * @return - String "Sorted" if array is already sorted, otherwise "Not sorted"
@@ -162,7 +226,7 @@ public abstract class Sorter implements Showable{
 	 * Private class method that returns a length of array
 	 * </p>
 	 * 
-	 * @see Sorter#getInfo()
+	 * @see IterEngine#getInfo()
 	 * 
 	 * @param arr - an array to work with
 	 * @return - length of array (or amount of elements in array)
@@ -177,7 +241,7 @@ public abstract class Sorter implements Showable{
 	 * Private class method that returns maximal value in array
 	 * </p>
 	 * 
-	 * @see Sorter#getInfo()
+	 * @see IterEngine#getInfo()
 	 * 
 	 * @param arr - an array to work with
 	 * @return - maximal value in array
@@ -197,7 +261,7 @@ public abstract class Sorter implements Showable{
 	 * Private class method that returns minimal value in array
 	 * </p>
 	 * 
-	 * @see Sorter#getInfo()
+	 * @see IterEngine#getInfo()
 	 * 
 	 * @param arr - an array to work with
 	 * @return - minimal value in array
@@ -288,19 +352,19 @@ public abstract class Sorter implements Showable{
 	 * Gathers information about array from private class methods.
 	 * </p>
 	 * 
-	 * @see Sorter#isSorted()
-	 * @see Sorter#getNumberOfElements()
-	 * @see Sorter#max()
-	 * @see Sorter#min()
+	 * @see IterEngine#isSorted()
+	 * @see IterEngine#getNumberOfElements()
+	 * @see IterEngine#max()
+	 * @see IterEngine#min()
 	 * 
 	 * @param arr - an array to work with
 	 */
 	
 	public static void showInfo(int[] arr) {
 		System.out.println("Array : " + Arrays.toString(arr));
-		System.out.println("Status : " + Sorter.isSorted(arr));
-		System.out.println("Number of elements : " + Sorter.getNumberOfElements(arr));
-		System.out.println("Biggest element : " + Sorter.max(arr));
-		System.out.println("Smallest element : " + Sorter.min(arr));
+		System.out.println("Status : " + IterEngine.isSorted(arr));
+		System.out.println("Number of elements : " + IterEngine.getNumberOfElements(arr));
+		System.out.println("Biggest element : " + IterEngine.max(arr));
+		System.out.println("Smallest element : " + IterEngine.min(arr));
 	 }
 }
