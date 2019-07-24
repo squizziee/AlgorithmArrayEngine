@@ -1,4 +1,4 @@
-# pj.util.IterEngine
+# exp.util.IterEngine
 Java class with some methods to work with `Arrays` and `List`.
 ## Methods
 * **`randomFill()`** - fils an array or container with random numbers
