@@ -1,4 +1,4 @@
-package io.github.squizziee.util;
+package exp.util;
 
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
