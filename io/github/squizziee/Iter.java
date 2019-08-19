@@ -11,7 +11,7 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 
 public abstract class Iter {
-	
+	 
 	public static void main(String[] args) {
 		List<Integer> list = new ArrayList<>();
 		randomFill(list, 10, 0, 100);
