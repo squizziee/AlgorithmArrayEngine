@@ -6,4 +6,4 @@ Java class with some methods to work with `Arrays` and `List`.
 * **`quickSort()`** - sorts numbers using recursive Quick Sort algorithm
 * **`selectionSort()`** - sorts numbers using quite simple Selection Sort algorithm
 * **`insertionSort()`** - sorts numbers using very simple Insertion Sort algorithm 
-* **`compare()`** - compares two numbers and returns or biggest number or some `Object`, that have been selected in parametres
+* **`compare()`** - compares two numbers and returns or biggest number or some `Object` selected in parametres
