@@ -10,7 +10,7 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 
 public abstract class Iter {
-	
+	 
 	public static void randomFill(int... arr) {
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = ThreadLocalRandom.current().nextInt();
