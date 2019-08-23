@@ -154,4 +154,37 @@ public abstract class Iter {
 		}
 	}
 	
+	public static int getMostRepeatable(int[] arr) {
+		int max = 0;
+		int maxCounter = 0;
+		for (int i : arr) {
+			int counter = 0;
+			for (int j : arr) {
+				if (i == j)
+					counter++;
+			}
+			if (counter > maxCounter) {
+				maxCounter = counter;
+				max = i;
+			}
+		}
+		return max;
+	}
+	
+	public static Integer getMostRepeatable(List<Integer> list) {
+		Integer max = 0;
+		Integer maxCounter = 0;
+		for (int i : list) {
+			int counter = 0;
+			for (int j : list) {
+				if (i == j)
+					counter++;
+			}
+			if (counter > maxCounter) {
+				maxCounter = counter;
+				max = i;
+			}
+		}
+		return max;
+	}
 }
