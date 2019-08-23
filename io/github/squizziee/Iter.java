@@ -184,7 +184,7 @@ public abstract class Iter {
 				maxCounter = counter;
 				max = i;
 			}
-		}
+		} 
 		return max;
 	}
 }
