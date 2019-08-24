@@ -1,9 +1,5 @@
 # Classes
-* **
-```java
-io.github.squizziee.Iter
-```
-**
+* **`io.github.squizziee.Iter`**
   * ## Methods
     * **`randomFill()`** - fils an array or container with pseudorandomly generated numbers
     * **`bubbleSort()`** - sorts numbers using Bubble Sort algorithm
