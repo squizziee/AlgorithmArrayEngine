@@ -1,6 +1,5 @@
 # Classes
-* 
-```java
+* ```java
 io.github.squizziee.IterableProcessor
 ```
   * ## Methods
@@ -13,8 +12,7 @@ io.github.squizziee.IterableProcessor
     * **`reverse()`** - reverses the order of the elements in `int[]` or `List<Integer>`
     * **`getMostRepeatable()`** - returns an element with the biggest frequency in `int[]` or `List<Integer>`
     
-* 
-```java
+* ```java
 io.github.squizziee.StringProcessor
 ```
   * ## Methods
