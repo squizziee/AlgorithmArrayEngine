@@ -2,6 +2,13 @@
 ```java
 io.github.squizziee.IterableProcessor
 ```
+  * ## Fields
+    * ```java
+      static final char[] LETTERS
+      ```
+    * ```java
+      static final char[] Vowels
+      ```
   * ## Methods
     * **`randomFill()`** - fils an array or container with pseudorandomly generated numbers
     * **`bubbleSort()`** - sorts numbers using Bubble Sort algorithm
