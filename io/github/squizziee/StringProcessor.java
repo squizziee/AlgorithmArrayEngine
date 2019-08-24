@@ -58,4 +58,12 @@ public class StringProcessor {
 		return result.toString();
 	}
 	
+	public static char[] getCharSubSequence(int start, int bound) {
+		StringBuilder result = new StringBuilder();
+		for (int i = start; i < bound; i++) {
+			result.append((char) i);
+		}
+		return result.toString().toCharArray();
+	}
+	
 }
