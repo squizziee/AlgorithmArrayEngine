@@ -1,14 +1,9 @@
 # Classes
 ```java
-io.github.squizziee.IterableProcessor
-```
+   io.github.squizziee.IterableProcessor
+   ```
   * ## Fields
-    * ```java
-      static final char[] LETTERS // all English alphabet letters
-      ```
-    * ```java
-      static final char[] VOWELS // all English alphabet vowels
-      ```
+    No fiels here so far.
   * ## Methods
     * **`randomFill()`** - fils an array or container with pseudorandomly generated numbers
     * **`bubbleSort()`** - sorts numbers using Bubble Sort algorithm
@@ -20,8 +15,15 @@ io.github.squizziee.IterableProcessor
     * **`getMostRepeatable()`** - returns an element with the biggest frequency in `int[]` or `List<Integer>`
     
 ```java
-io.github.squizziee.StringProcessor
-```
+   io.github.squizziee.StringProcessor
+   ```
+  * ## Fields
+     * ```java
+       static final char[] LETTERS // all English alphabet letters
+       ```
+     * ```java
+       static final char[] VOWELS // all English alphabet vowels
+       ```
   * ## Methods
     * **`reverse()`** - returns a `String` with inverted sequence of chars of the `String` argument
     * **`isPalindrome()`** - returns `true` if the `String` argument is palindrome, otherwise false
