@@ -1,5 +1,8 @@
 # Classes
-* **`io.github.squizziee.IterableProcessor`**
+* 
+```java
+io.github.squizziee.IterableProcessor
+```
   * ## Methods
     * **`randomFill()`** - fils an array or container with pseudorandomly generated numbers
     * **`bubbleSort()`** - sorts numbers using Bubble Sort algorithm
@@ -10,8 +13,10 @@
     * **`reverse()`** - reverses the order of the elements in `int[]` or `List<Integer>`
     * **`getMostRepeatable()`** - returns an element with the biggest frequency in `int[]` or `List<Integer>`
     
-    
-* **`io.github.squizziee.StringProcessor`**
+* 
+```java
+io.github.squizziee.StringProcessor
+```
   * ## Methods
     * **`reverse()`** - returns a `String` with inverted sequence of chars of the `String` argument
     * **`isPalindrome()`** - returns `true` if the `String` argument is palindrome, otherwise false
