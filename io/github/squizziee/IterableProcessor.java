@@ -7,10 +7,10 @@ import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * @author Ivan Lyango
- * @version 0.4
+ * @version 0.5
  */
 
-public abstract class Iter {
+public abstract class IterableProcessor {
 	 
 	public static void main(String[] args) {
 		List<Integer> list = new ArrayList<>();
