@@ -2,9 +2,9 @@
 ```java
    io.github.squizziee.IterableProcessor
    ```
-  * ## Fields
+  * ### Fields
     No fiels here so far.
-  * ## Methods
+  * ### Methods
     * **`randomFill()`** - fils an array or container with pseudorandomly generated numbers
     * **`bubbleSort()`** - sorts numbers using Bubble Sort algorithm
     * **`quickSort()`** - sorts numbers using Quick Sort algorithm
@@ -17,14 +17,14 @@
 ```java
    io.github.squizziee.StringProcessor
    ```
-  * ## Fields
+  * ### Fields
      * ```java
        static final char[] LETTERS // all English alphabet letters
        ```
      * ```java
        static final char[] VOWELS // all English alphabet vowels
        ```
-  * ## Methods
+  * ### Methods
     * **`reverse()`** - returns a `String` with inverted sequence of chars of the `String` argument
     * **`isPalindrome()`** - returns `true` if the `String` argument is palindrome, otherwise false
     * **`generateRandomWord()`** - generates pseudorandom char sequence and converts it into `String`
