@@ -7,7 +7,10 @@ import java.util.ListIterator;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class StringProcessor {
-
+	
+	public static final char[] LETTERS = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+	public static final char[] VOWELS = "euioa".toCharArray();
+	
 	public static String reverse(String str) {
 		List<String> list = new LinkedList<>(Arrays.asList(str.split("")));
 		StringBuilder result = new StringBuilder();
@@ -39,8 +42,6 @@ public class StringProcessor {
 	}
 	
 	public static String generateRandomWord(int length, boolean uppercase) {
-		final String[] LETTERS = "abcdefghijklmnopqrstuvwxyz".split(""); 
-		final String[] VOWELS = "euioa".split("");
 		StringBuilder result = new StringBuilder();
 		for (int i = 0; i <= length; i++) {
 			int token = ThreadLocalRandom.current().nextInt(0, 1 + 1);
