@@ -4,10 +4,10 @@ io.github.squizziee.IterableProcessor
 ```
   * ## Fields
     * ```java
-      static final char[] LETTERS
+      static final char[] LETTERS // all English alphabet letters
       ```
     * ```java
-      static final char[] Vowels
+      static final char[] VOWELS // all English alphabet vowels
       ```
   * ## Methods
     * **`randomFill()`** - fils an array or container with pseudorandomly generated numbers
