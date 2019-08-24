@@ -18,3 +18,4 @@ io.github.squizziee.StringProcessor
   * ## Methods
     * **`reverse()`** - returns a `String` with inverted sequence of chars of the `String` argument
     * **`isPalindrome()`** - returns `true` if the `String` argument is palindrome, otherwise false
+    * **`generateRandomWord()`** - generates pseudorandom char sequence and converts it into `String`
