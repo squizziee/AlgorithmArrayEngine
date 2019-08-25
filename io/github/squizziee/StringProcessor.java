@@ -8,7 +8,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class StringProcessor {
 	
-	public static final char[] LETTERS = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+	public static final char[] CONSONANTS = "bcdfghjklmnpqrstvwxyz".toCharArray();
 	public static final char[] VOWELS = "euioa".toCharArray();
 	
 	public static String reverse(String str) {
@@ -47,7 +47,7 @@ public class StringProcessor {
 			int token = ThreadLocalRandom.current().nextInt(0, 1 + 1);
 			switch (token) {
 				case 0 :
-					result.append(LETTERS[ThreadLocalRandom.current().nextInt(0, LETTERS.length)]);
+					result.append(CONSONANTS[ThreadLocalRandom.current().nextInt(0, CONSONANTS.length)]);
 					break;
 				case 1 :
 					result.append(VOWELS[ThreadLocalRandom.current().nextInt(0, VOWELS.length)]);
