@@ -19,10 +19,10 @@
    ```
   * ### Fields
      * ```java
-       static final char[] LETTERS // all English alphabet letters
+       static final char[] CONSONANTS // all English consonants
        ```
      * ```java
-       static final char[] VOWELS // all English alphabet vowels
+       static final char[] VOWELS // all English vowels
        ```
   * ### Methods
     * **`reverse()`** - returns a `String` with inverted sequence of chars of the `String` argument
