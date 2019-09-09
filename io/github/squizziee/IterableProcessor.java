@@ -12,15 +12,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public abstract class IterableProcessor {
 	 
-	public static void main(String[] args) {
-		List<Integer> list = new ArrayList<>();
-		randomFill(list, 10, 0, 100);
-		System.out.println(list);
-		reverse(list);
-		System.out.println(list);
-	}
-	
-	public static void randomFill(int... arr) {
+	public static void randomFill(int[] arr) {
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = ThreadLocalRandom.current().nextInt();
 		}	
@@ -28,7 +20,7 @@ public abstract class IterableProcessor {
 	
 	public static void randomFill(int[] arr, int start, int bound) {
 		for (int i = 0; i < arr.length; i++) {
-			arr[i] = ThreadLocalRandom.current().nextInt(start, bound + 1);
+			arr[i] = ThreadLocalRandom.current().nextInt(start, bound);
 		}
 	}
 	
@@ -38,9 +30,9 @@ public abstract class IterableProcessor {
 		}
 	}
 	
-	public static void randomFill(List<Integer> list, int size, int start, int bound) {
-		for (int i = 0; i < size; i++) {
-			list.add(ThreadLocalRandom.current().nextInt(start, bound + 1));
+	public static void randomFill(List<Integer> list, int amount, int start, int bound) {
+		for (int i = 0; i < amount; i++) {
+			list.add(ThreadLocalRandom.current().nextInt(start, bound));
 		}
 	}
 	
@@ -55,6 +47,22 @@ public abstract class IterableProcessor {
                     temp = arr[i + 1];
                     arr[i + 1] = arr[i];
                     arr[i] = temp;
+                }
+            }
+        }
+	}
+	
+	public static void bubbleSort(List<Integer> list) {
+		int temp;
+        boolean isSorted = false;
+        while (!isSorted) {
+            isSorted = true;
+            for (int i = 0; i < list.size() - 1; i++) {
+                if (list.get(i) > list.get(i + 1)) {
+                    isSorted = false;
+                    temp = list.get(i + 1);
+                    list.set(i + 1, list.get(i));
+                    list.set(i, temp);
                 }
             }
         }
@@ -116,7 +124,7 @@ public abstract class IterableProcessor {
 	
 	public static boolean isSorted(int[] arr) {
 		int[] sortedArr = Arrays.copyOf(arr, arr.length);
-		Arrays.sort(sortedArr);	 
+		quickSort(sortedArr);	 
 		return Arrays.equals(arr, sortedArr);
     }
 	
@@ -171,6 +179,23 @@ public abstract class IterableProcessor {
 		return max;
 	}
 	
+	public static int getMostRare(int[] arr) {
+		int min = 0;
+		int minCounter = 0;
+		for (int i : arr) {
+			int counter = 0;
+			for (int j : arr) {
+				if (i == j)
+					counter++;
+			}
+			if (counter < minCounter) {
+				minCounter = counter;
+				min = i;
+			}
+		}
+		return min;
+	}
+	
 	public static Integer getMostRepeatable(List<Integer> list) {
 		Integer max = 0;
 		Integer maxCounter = 0;
@@ -184,7 +209,56 @@ public abstract class IterableProcessor {
 				maxCounter = counter;
 				max = i;
 			}
-		} 
+		}
 		return max;
+	}
+	
+	public static int getMostRare(List<Integer> list) {
+		int min = 0;
+		int minCounter = 0;
+		for (int i : list) {
+			int counter = 0;
+			for (int j : list) {
+				if (i == j)
+					counter++;
+			}
+			if (counter < minCounter) {
+				minCounter = counter;
+				min = i;
+			}
+		}
+		return min;
+	}
+	
+	public static boolean contains(int[] arr, int item) {
+		int start = 0;
+		int end = arr.length;
+		while (start <= end) {
+			int middle = (start + end) / 2;
+			int guess = arr[middle];
+			if (guess == item)
+				return true;
+			if (guess < item)
+				start = middle + 1;
+			else if (guess > item)
+				end = middle - 1;
+		}
+		return false;
+	}
+	
+	public static boolean contains(List<Integer> list, int item) {
+		int start = 0;
+		int end = list.size();
+		while (start <= end) {
+			int middle = (start + end) / 2;
+			int guess = list.get(middle);
+			if (guess == item)
+				return true;
+			if (guess < item)
+				start = middle + 1;
+			else if (guess > item)
+				end = middle - 1;
+		}
+		return false;
 	}
 }
