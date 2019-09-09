@@ -3,16 +3,18 @@
    io.github.squizziee.IterableProcessor
    ```
   * ### Fields
-    No fiels here so far.
+    No fiels here so far
   * ### Methods
-    * **`randomFill()`** - fils an array or container with pseudorandomly generated numbers
-    * **`bubbleSort()`** - sorts numbers using Bubble Sort algorithm
+    * **`randomFill()`** - fills a container with pseudorandom numbers
+    * **`bubbleSort()`** - sorts numbers in container using Bubble Sort algorithm
     * **`quickSort()`** - sorts numbers using Quick Sort algorithm
-    * **`selectionSort()`** - sorts numbers using Selection Sort algorithm
-    * **`insertionSort()`** - sorts numbers using Insertion Sort algorithm 
-    * **`compare()`** - compares two numbers and returns or biggest number or some `Object` selected in parametres
-    * **`reverse()`** - reverses the order of the elements in `int[]` or `List<Integer>`
-    * **`getMostRepeatable()`** - returns an element with the biggest frequency in `int[]` or `List<Integer>`
+    * **`selectionSort()`** - sorts numbers in container using Selection Sort algorithm
+    * **`insertionSort()`** - sorts numbers in container using Insertion Sort algorithm 
+    * **`compare()`** - compares two numbers and returns or biggest number or some `Object`
+    * **`reverse()`** - reverses the order of the elements in container
+    * **`getMostRepeatable()`** - returns an element with the biggest frequency in container
+    * **`getMostRare()`** - returns an element with the smallest frequency in container
+    * **`contains()`** - returns true if element exists in container, otherwise false
     
 ```java
    io.github.squizziee.StringProcessor
