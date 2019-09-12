@@ -1,6 +1,5 @@
 package io.github.squizziee;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
@@ -10,7 +9,7 @@ import java.util.concurrent.ThreadLocalRandom;
  * @version 0.5
  */
 
-public abstract class IterableProcessor {
+public abstract class ICore {
 	 
 	public static void randomFill(int[] arr) {
 		for (int i = 0; i < arr.length; i++) {

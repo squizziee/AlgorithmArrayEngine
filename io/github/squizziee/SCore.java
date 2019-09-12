@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class StringProcessor {
+public class SCore {
 	
 	public static final char[] CONSONANTS = "bcdfghjklmnpqrstvwxyz".toCharArray();
 	public static final char[] VOWELS = "euioa".toCharArray();
