@@ -20,7 +20,7 @@
        
     * `private` and `protected`
     
-       * **`partition()`** - "separates" elements in quickSort algorithm implementation
+       * **`partition()`** - "separates" elements in Quick sort algorithm implementation
        * **`doQuickSort()`** - handles the behaviour of the `partition()` method 
        
 ```java
