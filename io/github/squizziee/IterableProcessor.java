@@ -68,32 +68,33 @@ public abstract class IterableProcessor {
         }
 	}
 	
-	private static int partition(int[] arr, int begin, int bound) {
-		int b = begin, e = bound;
-		int temp;
-		int pivot = arr[(begin + bound) / 2];
-		while (b <= e) {
-			while (arr[b] < pivot) b++;
-			while (arr[e] > pivot) e--;
-			if (b <= e) {
-				temp = arr[b];
-				arr[b] = arr[e];
-				arr[e] = temp;
-				b++;
-				e--;
-			}
-		}
-		return b;
-	}
-	
-	private static void doQuickSort(int[] arr, int begin, int bound) {
-		int index = partition(arr, begin, bound);
-		if (begin < index - 1) doQuickSort(arr, begin, index - 1);
-		if (begin < bound) doQuickSort(arr, index, bound);
-	}
-	
 	public static void quickSort(int[] arr) {
 		doQuickSort(arr, 0, arr.length - 1);
+	}
+	
+	private static void doQuickSort(int[] arr, int begin, int end) {
+		if (begin < end) {
+			int pivot = partition(arr, begin, end);
+			doQuickSort(arr, begin, pivot - 1);
+			doQuickSort(arr, pivot + 1, end);
+		}
+	}
+	
+	private static int partition(int[] arr, int begin, int end) {
+		int pivot = arr[end];
+		int i = begin - 1;
+		for (int j = begin; j < end; j++) {
+			if (arr[j] <= pivot) {
+				i++;
+				int temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+			}
+		}
+		int temp = arr[i + 1];
+		arr[i + 1] = arr[end];
+		arr[end] = temp;
+		return i + 1;
 	}
 	
 	public static void selectionSort(int[] arr) {
@@ -261,4 +262,5 @@ public abstract class IterableProcessor {
 		}
 		return false;
 	}
+	
 }
