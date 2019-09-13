@@ -1,6 +1,6 @@
 # Classes
 ```java
-   io.github.squizziee.IterableProcessor
+   io.github.squizziee.ICore
    ```
   * ### Fields
     No fiels here so far
@@ -24,7 +24,7 @@
        * **`doQuickSort()`** - handles the behaviour of the `partition()` method 
        
 ```java
-   io.github.squizziee.StringProcessor
+   io.github.squizziee.SCore
    ```
   * ### Fields
      * ```java
